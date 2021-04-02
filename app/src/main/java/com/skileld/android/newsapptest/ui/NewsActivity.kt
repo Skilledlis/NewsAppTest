@@ -12,6 +12,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.onNavDestinationSelected
 import com.skileld.android.newsapptest.R
 import com.skileld.android.newsapptest.repository.NewsRepository
+import java.io.Serializable
 
 class NewsActivity : AppCompatActivity() {
 

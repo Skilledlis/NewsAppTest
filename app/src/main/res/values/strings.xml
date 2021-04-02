@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NewsAppTest</string>
+    <string name="reedOnWeb">Читать на сайте</string>
 </resources>

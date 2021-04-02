@@ -18,6 +18,7 @@ import com.skileld.android.newsapptest.adapters.NewsAdapter
 import com.skileld.android.newsapptest.ui.NewsActivity
 import com.skileld.android.newsapptest.ui.NewsViewModel
 import com.skileld.android.newsapptest.util.Resource
+import java.io.Serializable
 
 class NewsFragment : Fragment() {
 
@@ -26,7 +27,6 @@ class NewsFragment : Fragment() {
 
     lateinit var viewModel: NewsViewModel
     lateinit var newsAdapter: NewsAdapter
-    lateinit var supportAB: ActionBar
 
 
     override fun onCreateView(
@@ -61,7 +61,7 @@ class NewsFragment : Fragment() {
             setDisplayShowHomeEnabled(false)
         }
 
-        viewModel.news.observe(viewLifecycleOwner, Observer { response ->
+        viewModel.news.observe(viewLifecycleOwner, { response ->
             when (response) {
                 is Resource.Success -> {
                     hideProgressBar()
